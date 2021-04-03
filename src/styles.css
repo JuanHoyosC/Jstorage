@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    
+}
+
+.mat-drawer-inner-container {
+    overflow-y: hidden !important;
+}
+
+.mat-drawer-content {
+    overflow-x: hidden !important;
+    background-color: #fff !important;
+}
+
+.no-outline {
+    outline: none !important;
+}
+
+.small {
+    font-size: 14px;
+}
+
+.color-primary {
+    color: #3F51B5; 
+}
+
+.bg-primary {
+    background-color: #3F51B5;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+div.mat-expansion-panel-body {
+    padding: 0;
+}
+
+.mat-simple-snackbar {
+    overflow-y: hidden !important;
+}
+
+mat-spinner.mat-progress-spinner.small.spinner.mat-primary.mat-progress-spinner-indeterminate-animation, 
+        mat-spinner.mat-progress-spinner.small.spinner.mat-primary.mat-progress-spinner-indeterminate-animation svg{
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.mat-expansion-indicator::after {
+    color: transparent !important;
+    border-style: none;
+}
+
+.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+    color: transparent !important;
+    border-style: none;
+}
+
+.container {
+    width: 85% !important;
+    max-width: 85% !important;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+}

@@ -1,0 +1,17 @@
+<button mat-button (click)="irA()" *ngIf="!_crud.usuario.nombre" [ngClass]="clase2">
+    <mat-icon>person</mat-icon> Ingresar
+</button>
+
+<button mat-flat-button color="primary" class="d-flex" [ngClass]="clase" [matMenuTriggerFor]="beforeMenu" *ngIf="_crud.usuario.nombre">
+    <img [src]="_crud.usuario.foto" alt="foto_user" class="rounded-circle" width="30px" height="30px">
+    <small class="small ml-2">{{ this._crud.usuario.nombre | slice:0:30}}
+        <small *ngIf="this._crud.usuario.nombre.length > 30">...</small>
+    </small>
+</button>
+
+
+<mat-menu #beforeMenu="matMenu" xPosition="before" class="border">
+    <button mat-menu-item class="no-outline w-100" (click)="_auth.logout()">
+        Cerrar sesión
+    </button>
+</mat-menu>

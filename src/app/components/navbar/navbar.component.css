@@ -1,0 +1,96 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+.example-sidenav-content {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  display: flex;
+  width: 300px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 102px;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.list-group-item:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+
+button {
+  outline: none;
+}
+
+.navbar {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.encontrados {
+  background-color: #fff;
+  position: absolute;
+  min-height: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 90%;
+  left: 5%;
+}
+
+.side__center {
+  width: 400px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.nav__search {
+  width: 90%;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 5px;
+}
+
+.nav__imagen__img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.cursor-nav-vertical {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 780px) {
+
+  .list-group-item {
+    font-size: 14px;
+    padding:12px 8px;
+  }
+
+
+  .example-sidenav-content {
+    width: 250px;
+  }
+
+  .nav__imagen__img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    .nav__search-2 {
+        margin-top: 24px;
+    }
+}

@@ -1,0 +1,28 @@
+
+.fa-file-image {
+    color:  #3F51B5;
+}
+
+.fa-play-circle {
+    color: #F44336;
+}
+
+.fa-video {
+    color:#FF6E00;
+}
+
+.fa-file-excel {
+    color: #456;
+}
+
+.fa-file-image , .fa-play-circle, .fa-video, .fa-file-excel {
+    font-size: 16px;
+}
+
+.principal {
+    font-size: 48px;
+}
+
+.tam {
+    width: 25px;
+}

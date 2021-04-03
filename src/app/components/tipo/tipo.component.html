@@ -1,0 +1,4 @@
+<i class="fas fa-file-image" [ngClass]="clase" *ngIf="_tipo.aceptarImagen( tipo )"></i>
+<i class="fas fa-video" [ngClass]="clase" *ngIf="_tipo.aceptarVideo( tipo )"></i>
+<i class="fas fa-play-circle" [ngClass]="clase" *ngIf="_tipo.aceptarMusica( tipo )"></i>
+<i class="fas fa-file-excel" [ngClass]="clase" *ngIf="_tipo.aceptarNot( tipo )"></i>

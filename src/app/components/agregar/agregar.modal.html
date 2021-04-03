@@ -1,0 +1,28 @@
+<div mat-dialog-content class="animate__animated animate__fadeIn m-0 p-0" #divForm style="overflow-y: hidden;">
+    <form #form="ngForm" (submit)="crearCarpeta( form )">
+        <div class="form-group">
+          <input type="text" class="form-control" name="nombre" ngModel #nombre="ngModel"
+          placeholder="Nombre de la carpeta" minlength="3" maxlength="10" required>
+          <small class="text-danger" *ngIf="(form.submitted && nombre.invalid)">Debe agregar un nombre</small>
+        </div>
+
+        <small class="text-danger" *ngIf="(colores.invalid && colores.touched) || 
+              (form.submitted && colores.invalid)">Debe elegir un color</small>
+        <div class="d-flex justify-content-between border p-2 mb-3">
+            <label for="primary" class="p-4 primary rounded-circle pointer my-0"></label>
+            <input type="radio" name="colores" id="primary" value="primary" ngModel #colores="ngModel" required>
+
+            <label for="accent" class="p-4 accent rounded-circle pointer my-0"></label>
+            <input type="radio" name="colores" id="accent" value="accent" ngModel #colores="ngModel" required>
+
+            <label for="warn" class="p-4 warn rounded-circle pointer my-0"></label>
+            <input type="radio" name="colores" id="warn" value="warn" ngModel #colores="ngModel" required>
+
+        </div>
+        
+        <button type="submit" class="btn primary text-white w-100 d-block">Crear</button>
+      </form>
+</div>
+  
+  
+  

@@ -1,0 +1,25 @@
+
+.accent {
+    background-color:  #ff4081;
+}
+
+.warn {
+    background-color:  #f44336;
+}
+
+.primary {
+    background-color:  #3F51B5;
+}
+
+.accent:hover, .primary:hover, .warn:hover {
+    transform: scale(1.1);
+}
+input[type="radio"] {
+    width: 0;
+    height: 0;
+    border: none;
+}
+
+form {
+    overflow-y: hidden;
+}

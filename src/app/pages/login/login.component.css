@@ -1,0 +1,68 @@
+.formulario__login {
+    width: 500px;
+}
+
+.formulario__input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    padding: 0 10px;
+    border: 1px solid #d8d8d8;
+    background-color: #fff;
+    box-shadow: 0 0 0px 50px rgb(255, 255, 255) inset !important;
+    
+}
+
+
+
+.formulario__input:focus {
+   border: 1px solid #3F51B5;
+}
+
+.formulario__button {
+    height: 50px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    background-color: #3F51B5;
+    outline: none;
+}
+
+.formulario__button:hover{
+    background-color: #5665bb;
+}
+
+.icon {
+    color: #3F51B5;
+}
+
+
+.formulario__cuentas img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .formulario__login {
+        width: 100%;
+        margin: 0;
+        padding: 0 !important;
+    }
+}
+
+@keyframes inputAnimation {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

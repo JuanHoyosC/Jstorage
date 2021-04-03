@@ -1,0 +1,26 @@
+<form autocomplete="off" [formGroup]="forma" (ngSubmit)="ingresar()"
+    class="formulario__login mx-auto px-5 animate__animated animate__bounceInLeft">
+    <p class="text-center text-secondary mb-5 h2 font-weight-light">Ingresa a JStorage</p>
+
+    <small *ngIf="correoNoValido" class="text-danger">Ingrese un correo valido</small>
+    <input type="text" class="formulario__input mb-4" placeholder="Correo electronico" formControlName="correo"
+        [class.is-invalid]="correoNoValido">
+
+    <small *ngIf="passNoValido" class="text-danger">La contraseña debe tener minimo 6 letras</small>
+    <input type="password" class="formulario__input mb-4" name="" id="" placeholder="Contraseña"
+        formControlName="password" [class.is-invalid]="passNoValido">
+
+    <button type="submit" class="formulario__button  d-block mx-auto mb-4">Ingresar</button>
+
+    <p class="small text-center text-secondary">- Or -</p>
+
+    <div class="formulario__cuentas text-center mb-4">
+        <i class="fab fa-google icon h1 pointer" (click)="_auth.loginWithGoogle()"></i>
+        <i class="fab fa-facebook icon h1  ml-3 pointer"></i>
+    </div>
+    
+    <div class="d-flex justify-content-center">
+        <p>¿No tienes una cuenta?</p>
+        <p class="ml-4 "><a routerLink="/registro">Crea una cuenta</a></p>
+    </div>
+</form>

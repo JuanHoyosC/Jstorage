@@ -1,0 +1,29 @@
+button{ outline: none; } 
+@media screen and (max-width: 500px) {
+    .movil {
+        position: absolute; 
+        top: 56px; 
+        border-radius: 0;
+        display: block !important ;
+    }
+
+    .usuario {
+        display: none !important;
+    }
+
+}
+
+@media screen and (min-width: 500px) { 
+    .usuario {
+        display: block !important;
+    }
+
+    .movil {
+        display: none !important;
+    }
+
+}
+
+.movil2 {
+    display: none !important;
+}

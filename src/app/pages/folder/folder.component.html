@@ -1,0 +1,23 @@
+<app-name-ruta></app-name-ruta>
+<app-detalles [archivo]="archivo"></app-detalles>
+<div class="folder animate__animated animate__bounceInLeft animate__fast" appDrag
+[carpeta]="folder">   
+    <app-agregar-archivos [carpeta]="folder" *ngIf="files !== undefined && (nameArchivo && files.length > 0)"></app-agregar-archivos>
+    <app-not-file-folder *ngIf="files?.length === 0 && !nameArchivo"></app-not-file-folder>
+    <app-archivos (verDetalles)="abrirDetalles($event)" (cerrarDetalles)="cerrarDetalles()" [archivos]="files" *ngIf="files?.length !== 0"></app-archivos>  
+</div>
+<app-file-cargando *ngIf="_crud.archivos.length !== 0"></app-file-cargando>
+
+<div *ngIf="files == undefined && !nameArchivo">
+    <div class="text-center">
+        <p><img src="../../../assets/Imagenes/found-icon.png" class="text-center" alt="not-found" srcset=""></p>
+    </div>
+    <h2 class="text-center text-secondary">No existe la carpeta que esta buscando.</h2>
+</div>
+
+<div *ngIf="(nameArchivo && files?.length === 0) || (nameArchivo  && files == undefined)">
+    <div class="text-center">
+        <p><img src="../../../assets/Imagenes/found-icon.png" class="text-center" alt="not-found" srcset=""></p>
+    </div>
+    <h2 class="text-center text-secondary">No existe el archivo que estas buscando.</h2>
+</div>

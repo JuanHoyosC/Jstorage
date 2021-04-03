@@ -1,0 +1,26 @@
+.icon-arrow {
+    font-size: 3rem; 
+    width: 3rem; 
+    height: 3rem;
+    animation-name: animation;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    animation-duration: .3s;
+}
+
+.create-folder{
+    user-select: none;
+}
+
+
+@keyframes animation {
+    0% {
+        transform: translateY(0);
+    }
+
+
+    100% {
+        transform: translateY(10px);
+    }
+}

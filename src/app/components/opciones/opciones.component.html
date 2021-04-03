@@ -1,0 +1,27 @@
+<div style="visibility: hidden; position: absolute" [style.left]="contextMenuPosition.x"
+  [style.top]="contextMenuPosition.y" [matMenuTriggerFor]="menu">
+</div>
+
+<mat-menu #menu="matMenu" class="border">
+  <button mat-menu-item class="button-no-outline">
+    <mat-icon>edit</mat-icon> Cambiar el 
+  </button>
+  <button mat-menu-item class="button-no-outline" [matMenuTriggerFor]="colores">
+    <mat-icon> format_color_fill</mat-icon> Cambiar de color
+  </button>
+  <button mat-menu-item class="button-no-outline" (click)="detalles()">
+    <mat-icon>remove_red_eye</mat-icon> Ver detalles
+  </button>
+  <button mat-menu-item class="button-no-outline" (click)="eliminar()">
+    <mat-icon>delete</mat-icon> Eliminar
+  </button>
+
+</mat-menu>
+
+<mat-menu #colores="matMenu" class="submenu__colores">
+  <div class="px-3 d-flex justify-content-between">
+    <button mat-fab class="color" color="warn"></button>
+    <button mat-fab class="color" color="primary"></button>
+    <button mat-fab class="color" color="accent"></button>
+  </div>
+</mat-menu>

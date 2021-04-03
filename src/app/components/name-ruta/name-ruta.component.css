@@ -1,0 +1,10 @@
+.ruta {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.ruta:hover {
+  color: #3f51b5 !important;
+  text-decoration: underline
+}
+

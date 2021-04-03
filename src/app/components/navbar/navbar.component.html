@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="navbar animate__animated animate__fadeIn" #navbar>
+    <div class="container">
+        <div class="side__left d-flex align-items-center">
+            <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="drawer.toggle(); limpiar();">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <a class="nav-link text-white py-0 pointer" (click)="home()">Jstorage</a>
+        </div>
+
+        <div class="side__right">
+            <app-usuario [clase]="'usuario'"></app-usuario>
+        </div>
+    </div>
+</mat-toolbar>
+
+
+<mat-drawer #drawer class="example-sidenav-content animate__animated" mode="push" style="overflow-y: hidden;">
+
+    <app-usuario [clase]="'movil'" [clase2]="'movil2'"></app-usuario>
+    <div class="nav__search mx-auto p-2 " [ngClass]="{'nav__search-2': _crud.usuario.nombre}">
+        <app-search (archivos)="archivos=$event" #search ></app-search>
+    </div>
+    <small class="text-danger mx-auto mt-1" *ngIf="!_crud.usuario.nombre" style="width: 90%; display: block;">Debes estar logueado para buscar...</small>
+    <div class="encontrados" *ngIf="archivos.length > 0">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let archivo of archivos" (click)="irA( archivo )"
+            data-bs-toggle="tooltip" data-bs-placement="top" [title]="archivo.ubicacion + '/' + archivo.nombre">
+                <app-tipo [tipo]="archivo.tipo" [clase]="'tam'" style="width: 25px;"></app-tipo>
+                <span class="ml-2">{{ archivo.nombre | slice:0:20 }} 
+                    <span *ngIf="archivo.nombre.length > 20">...</span> 
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="nav__imagen px-2 mt-5">
+        <img src="../../../assets/Imagenes/imagen-nav-vertical.png" alt="imagen_storage" class="nav__imagen__img">
+    </div>
+</mat-drawer>

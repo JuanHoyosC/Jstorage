@@ -1,0 +1,20 @@
+.body {
+    
+    overflow-x: hidden;
+}
+
+.overflow-hidden {
+    overflow-x: hidden;
+}
+
+.container {
+    padding-top: 64px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-top: 56px;
+    }
+}

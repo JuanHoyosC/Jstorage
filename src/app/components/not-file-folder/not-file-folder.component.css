@@ -1,0 +1,15 @@
+.contenedor__imagen-drop {
+    width: 550px;
+}
+
+.imagen-drop {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 550px) {
+    .contenedor__imagen-drop {
+        width: 100%;
+    }
+}

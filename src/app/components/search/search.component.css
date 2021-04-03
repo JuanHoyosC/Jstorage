@@ -1,0 +1,26 @@
+
+.search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0 5px;
+}
+
+.side__center__buscar {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(60, 60, 60);
+    padding: 0px 10px;
+    font-size: 16px;
+}
+
+
+input {
+    width: 100%;
+    outline: none !important;
+}
+
+.side__center__icon {
+    align-self: center;
+}

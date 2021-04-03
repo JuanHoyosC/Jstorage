@@ -1,0 +1,8 @@
+.example-drag {
+    background-color: rgba(174, 212, 255, 0.432);
+    color: rgb(28, 134, 255);
+    border: dotted 1px rgb(28, 134, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  

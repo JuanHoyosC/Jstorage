@@ -1,0 +1,49 @@
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+}
+
+.file-cargando {
+    width: 400px;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    z-index: 500;
+}
+
+span.mat-expansion-indicator.ng-tns-c96-6.ng-trigger.ng-trigger-indicatorRotate.ng-star-inserted {
+    display: none !important;
+}
+
+span {
+    display: none !important; 
+}
+
+.header, .header:hover {
+    background-color: #3F51B5 !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+    height: 48px;
+}
+
+
+.files-loading {
+    max-height: 300px; 
+    overflow-y: auto;
+}
+
+app-tipo i {
+    font-size: 18px;
+    color: #3F51B5;
+}
+
+.break {
+    word-break: break-word;
+}
+
+@media screen and (max-width: 450px) {
+    .file-cargando {
+        width: 300px;
+        right: 10px;
+    }
+}

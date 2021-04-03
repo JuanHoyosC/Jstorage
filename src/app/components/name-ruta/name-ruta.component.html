@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb mb-0">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/home" class="ruta" >{{  rutas( this.ruta )[0] }}</a></li>
+      <li class="breadcrumb-item active" aria-current="page" *ngIf="rutas( this.ruta ).length === 2">{{  rutas( this.ruta )[1] }}</li>
+      <li class="breadcrumb-item" aria-current="page" *ngIf="rutas( this.ruta )[2]">
+        <a (click)="irFolder( rutas( this.ruta )[1] )" class="ruta pointer" *ngIf="rutas( this.ruta )[2]">{{  rutas( this.ruta )[1] }}</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page" *ngIf="rutas( this.ruta )[2]">{{  rutas( this.ruta )[2]  }}</li>
+
+    </ol>
+</nav>

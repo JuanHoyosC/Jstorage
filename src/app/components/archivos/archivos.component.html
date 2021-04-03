@@ -1,0 +1,56 @@
+<div class="row p-0 m-0 container_archivos">
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 p-0 ff pointer"
+        *ngFor="let archivo of archivos; let i = index;">
+        <div class="card" #card (dblclick)="ver(archivo)" (click)="iluminar( card ); cerrar();" data-bs-toggle="tooltip"
+            data-bs-placement="top" [title]="archivo.nombre" (contextmenu)="opciones(card, i)">
+            <div class="card-header">
+                <app-tipo [tipo]="archivo.tipo" [clase]="'principal'"></app-tipo>
+            </div>
+            <div class="card-body p-2 d-flex seleccion">
+                <app-tipo [tipo]="archivo.tipo" [clase]="''"></app-tipo>
+                <p class="card-title mb-0 ml-2 align-self-center"> {{ archivo.nombre | slice:0:12 }}
+                    <span *ngIf="archivo.nombre.length > 12">...</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div style="visibility: hidden; position: absolute" [style.left]="contextMenuPosition.x"
+    [style.top]="contextMenuPosition.y" [matMenuTriggerFor]="menu">
+</div>
+
+
+<mat-menu #menu="matMenu" class="border">
+    <button mat-menu-item class="button-no-outline d-flex align-items-center"
+        (click)="seleccionar( archivoElement, archivoSelect )">
+        <i class="fas menu-i fa-eye"></i> Ver detalles
+    </button>
+    <button mat-menu-item class="button-no-outline d-flex align-items-center"
+        (click)="abrirArchivo( archivoSelect.url )">
+        <i class="fas menu-i fa-external-link-alt" style="font-size: 16px;"></i> Abrir archivo
+    </button>
+    <button mat-menu-item class="button-no-outline d-flex align-items-center" (click)="descargar( archivoSelect.path )">
+        <i class="fas menu-i fa-download"></i> Descargar archivo
+    </button>
+
+    <button mat-menu-item class="button-no-outline d-flex align-items-center" [matMenuTriggerFor]="folders">
+        <i class="fas menu-i fa-exchange-alt"></i> mover archivo
+    </button>
+
+    <button mat-menu-item class="button-no-outline d-flex align-items-center" (click)="eliminar()">
+        <i class="fas menu-i fa-trash"></i> Eliminar archivo
+    </button>
+
+</mat-menu>
+
+<mat-menu #folders="matMenu" class="pb-0">
+    <ul class="list-group" >
+        <li class="list-group-item folder" *ngFor="let folder of _crud.folders" (click)="mover( folder )">{{ folder.nombre }}</li>
+    </ul>
+</mat-menu>
+
+
+<app-modal-vista></app-modal-vista>

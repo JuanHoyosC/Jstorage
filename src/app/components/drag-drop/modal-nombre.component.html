@@ -1,0 +1,11 @@
+<div mat-dialog-content class="animate__animated animate__fadeIn m-0 p-0">
+    <form #form="ngForm" (submit)="cambiarNombre( form )">
+        <div class="form-group">
+          <input type="text" class="form-control" name="nombre" [ngModel]="data.nombre" #nombre="ngModel"
+          placeholder="Nuevo nombre" minlength="3" maxlength="10" required>
+          <small class="text-danger" *ngIf="(nombre.invalid && nombre.touched) || 
+          (form.submitted && nombre.invalid)">Debe agregar un nombre</small>
+        </div>       
+        <button type="submit" class="btn primary text-white w-100 d-block no-outline" [style.background]="'#3F51B5'">Editar</button>
+      </form>
+</div>

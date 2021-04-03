@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-end">
+  <button mat-flat-button color="primary" [matMenuTriggerFor]="beforeMenu">
+    <mat-icon>create_new_folder</mat-icon> Crear carpeta
+  </button>
+</div>
+<mat-menu #beforeMenu="matMenu" xPosition="before" class="border">
+  <button mat-menu-item (click)="openDialog()">
+    <mat-icon>folder</mat-icon>Crear Carpeta
+  </button>
+</mat-menu>
+
+
+

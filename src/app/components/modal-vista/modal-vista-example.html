@@ -1,0 +1,24 @@
+<div mat-dialog-content class="animate__animated w-100 a animate__fadeIn m-0 p-0">
+  <div class="row p-0 mx-0">
+    <div class="col p-0 m-0">
+
+      <div class="contenedor" *ngIf="_tipo.aceptarVideo( archivo.tipo )">
+        <video width="100%" controls >
+          <source [src]="archivo.url" [type]="'video/'+archivo.tipo" />
+          Su navegador no soporta contenido multimedia.
+        </video>
+      </div>
+
+      <div class="contenedor" *ngIf="_tipo.aceptarImagen( archivo.tipo )">
+        <img [src]="archivo.url" alt="archivo.nombre" width="100%"  style="object-fit: contain; object-position: top left;">
+      </div>
+
+      <div class="contenedor" *ngIf="_tipo.aceptarMusica( archivo.tipo )">
+        <audio controls style="background: #f1f3f4;">
+          <source [src]="archivo.url" />
+        </audio>
+      </div>
+
+    </div>
+  </div>
+</div>

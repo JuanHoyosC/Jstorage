@@ -1,0 +1,44 @@
+<div class="carpetas pt-5 mx-0 animate__animated animate__zoomIn animate__faster"
+  *ngIf="_crud.folders.length !== 0; else notFile">
+
+  <div class="carpeta pointer d-flex animate__animated animate__fast"
+    *ngFor="let carpeta of _crud.folders; let i = index" appDrag #drag [carpeta]="carpeta" (click)="seleccionar(drag)"
+    (contextmenu)="opciones(drag, i)" (dblclick)="irA( carpeta.nombre )">
+    <mat-icon [color]="carpeta.color">folder</mat-icon> <span class="ml-2">{{carpeta.nombre}}</span>
+  </div>
+
+</div>
+
+<ng-template #notFile>
+  <app-not-file></app-not-file>
+</ng-template>
+
+<div style="visibility: hidden; position: absolute" [style.left]="contextMenuPosition.x"
+  [style.top]="contextMenuPosition.y" [matMenuTriggerFor]="menu">
+</div>
+
+<mat-menu #menu="matMenu" class="border">
+  <button mat-menu-item class="button-no-outline d-flex align-items-center" (click)="abrirModal()">
+    <i class="fas menu-i fa-edit"></i> Cambiar el nombre
+  </button>
+  <button mat-menu-item class="button-no-outline d-flex align-items-center" [matMenuTriggerFor]="colores">
+    <i class="fas menu-i fa-palette"></i> Cambiar de color
+  </button>
+  <button mat-menu-item class="button-no-outline  d-flex align-items-center" (click)="detalles()">
+    <i class="fas menu-i fa-eye"></i> Ver detalles
+  </button>
+  <button mat-menu-item class="button-no-outline  d-flex align-items-center" (click)="eliminar()">
+    <i class="fas menu-i fa-trash"></i> Eliminar archivo
+  </button>
+
+</mat-menu>
+
+<mat-menu #colores="matMenu" class="submenu__colores border ">
+  <div class="px-3 d-flex justify-content-between py-2">
+    <button mat-fab class="color" color="primary" (click)="cambiarColor('primary')"></button>
+    <button mat-fab class="color" color="warn" (click)="cambiarColor('warn')"></button>
+    <button mat-fab class="color" color="accent" (click)="cambiarColor('accent')"></button>
+  </div>
+</mat-menu>
+
+<app-file-cargando *ngIf="_crud.archivos.length !== 0"></app-file-cargando>

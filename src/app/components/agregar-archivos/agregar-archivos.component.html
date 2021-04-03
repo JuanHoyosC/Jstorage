@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-between my-4">
+    <p class="mb-0 text-secondary">Archivos</p>
+    <button mat-flat-button color="primary" [matMenuTriggerFor]="beforeMenu">
+        <i class="fas fa-file-upload"></i> Agregar archivos</button>
+</div>
+
+<mat-menu #beforeMenu="matMenu" xPosition="before" class="border">
+
+    <input type="file" id="archivos" name="archivos" multiple appDrag [carpeta]="carpeta">
+    <label for="archivos" class="d-flex align-items-center mb-0">
+        <mat-icon>insert_drive_file</mat-icon>Subir archivos
+    </label>
+</mat-menu>
