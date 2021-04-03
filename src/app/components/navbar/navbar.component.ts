@@ -39,7 +39,7 @@ export class NavbarComponent  {
 
   home() {
     if(this._crud.usuario.nombre) { this._route.navigateByUrl('/home'); return ; }
-    this._route.navigateByUrl('/landing');
+    this._route.navigateByUrl('/login');
   }
 
 

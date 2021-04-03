@@ -9,6 +9,9 @@ import { Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+import { saveAs } from 'file-saver'
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,7 +25,7 @@ export class CrudService {
 
   private cant$ = new Subject<number>();
 
-  constructor(public afAuth: AngularFireAuth, private storage: AngularFireStorage, private afs: AngularFirestore,  private _snackBar: MatSnackBar) {
+  constructor(public afAuth: AngularFireAuth, private storage: AngularFireStorage, private afs: AngularFirestore, private _snackBar: MatSnackBar) {
     this.afAuth.authState.subscribe((user: any) => {
       if (!user) return;
       this.limpiar();
@@ -65,6 +68,8 @@ export class CrudService {
     return this.usuariosCollection.doc(this.usuario.uid).update({ folders: this.folders })
   }
 
+
+
   agregarArchivos(carpeta: FolderModel, archivos: any[]) {
     for (const archivo of archivos) {
       let tipo = archivo.name.split('.');
@@ -90,7 +95,10 @@ export class CrudService {
             const index = this.folders.findIndex(folder => folder.nombre === carpeta.nombre
               && folder.fecha === carpeta.fecha && folder.color === carpeta.color)
             this.folders.splice(index, 1, carpeta);
+
             this.actualizarCarpeta().then()
+
+
           }))
         }
 
@@ -174,18 +182,12 @@ export class CrudService {
   }
 
   descargarArchivo(path) {
+
     this.storage.ref(path).getDownloadURL().subscribe(function (url) {
       // `url` is the download URL for 'images/stars.jpg'
       console.log(url)
       // This can be downloaded directly:
-      var xhr = new XMLHttpRequest();
-      xhr.responseType = 'blob';
-      xhr.onload = function (event) {
-        var blob = xhr.response;
-        console.log(blob)
-      };
-      xhr.open('GET', url);
-      xhr.send();
+      saveAs(url, "hello world.png");
 
     })
   }

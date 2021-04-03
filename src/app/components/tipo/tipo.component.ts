@@ -10,6 +10,7 @@ export class TipoComponent {
 
   @Input() tipo;
   @Input() clase;
+  @Input() imagen;
   constructor( public _tipo: TipoFileService ) { }
 
 }

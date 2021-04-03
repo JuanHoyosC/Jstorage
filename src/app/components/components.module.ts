@@ -32,7 +32,6 @@ import { RutasPipe } from '../pipes/rutas.pipe';
 import { FolderComponent } from '../pages/folder/folder.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { RegistroComponent } from '../pages/registro/registro.component';
-import { LandingComponent } from '../pages/landing/landing.component';
 import { FechaPipe } from '../pipes/fecha.pipe';
 import { TipoPipe } from '../pipes/tipo.pipe';
 import { TipoComponent } from './tipo/tipo.component';
@@ -62,7 +61,6 @@ import { UsuarioComponent } from './usuario/usuario.component';
         FolderComponent,
         LoginComponent,
         RegistroComponent,
-        LandingComponent,
         DialogElementsAgregar,
         DialogElementsNombre,
         FechaPipe,
@@ -93,7 +91,6 @@ import { UsuarioComponent } from './usuario/usuario.component';
         FolderComponent,
         LoginComponent,
         RegistroComponent,
-        LandingComponent,
         DialogElementsAgregar,
         DialogElementsExample,
         DialogElementsNombre
