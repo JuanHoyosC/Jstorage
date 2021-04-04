@@ -5,6 +5,7 @@ button{ outline: none; }
         top: 56px; 
         border-radius: 0;
         display: block !important ;
+        width: 100%;
     }
 
     .usuario {

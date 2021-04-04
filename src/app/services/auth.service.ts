@@ -25,6 +25,13 @@ export class AuthService {
     }).catch(error => {})
   }
 
+  loginWithFacebook() {
+    this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider).then((res) => {
+      console.log(res)
+      this.route.navigateByUrl('/home');
+    }).catch(error => {})
+  }
+
   login(usuario: any) {
     return this.afAuth.auth
       .signInWithEmailAndPassword(usuario.correo, usuario.password)
@@ -56,7 +63,7 @@ export class AuthService {
     //Limpia los datos
     this._crud.limpiar();
     if (login === 'si') { this.route.navigateByUrl('/login'); return; };
-    this.route.navigateByUrl('/landing');
+    this.route.navigateByUrl('/login');
   }
 
 

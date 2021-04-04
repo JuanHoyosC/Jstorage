@@ -1,0 +1,315 @@
+[debug] [2021-04-04T02:05:31.690Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:05:31.694Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2021-04-04T02:05:31.694Z] CLI Version:   8.10.0
+[debug] [2021-04-04T02:05:31.695Z] Platform:      linux
+[debug] [2021-04-04T02:05:31.695Z] Node Version:  v10.19.0
+[debug] [2021-04-04T02:05:31.695Z] Time:          Sat Apr 03 2021 21:05:31 GMT-0500 (hora estándar de Colombia)
+[debug] [2021-04-04T02:05:31.695Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:05:31.695Z] 
+[debug] [2021-04-04T02:05:31.704Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-04T02:05:31.705Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/juan/Descargas/Estudio y programas/Proyectos/Angular/minidrive
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using linku-3. 
+[debug] [2021-04-04T02:05:37.303Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:05:37.303Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:05:37.704Z] <<< HTTP RESPONSE 400 {"date":"Sun, 04 Apr 2021 02:05:37 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:05:37.710Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/linku-3  
+ 
+[debug] [2021-04-04T02:05:38.108Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:05:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:05:38.114Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:05:38.117Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:05:38.119Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project linku-3. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-04-04T02:06:21.755Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:06:21.759Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-04-04T02:06:21.759Z] CLI Version:   8.10.0
+[debug] [2021-04-04T02:06:21.759Z] Platform:      linux
+[debug] [2021-04-04T02:06:21.760Z] Node Version:  v10.19.0
+[debug] [2021-04-04T02:06:21.760Z] Time:          Sat Apr 03 2021 21:06:21 GMT-0500 (hora estándar de Colombia)
+[debug] [2021-04-04T02:06:21.760Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:06:21.760Z] 
+[debug] [2021-04-04T02:06:21.772Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-04T02:06:21.772Z] > authorizing via signed-in user
+[debug] [2021-04-04T02:06:21.773Z] [iam] checking project linku-3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-04-04T02:06:21.778Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:06:21.778Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:06:22.110Z] <<< HTTP RESPONSE 400 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Sun, 04 Apr 2021 02:06:22 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:06:22.112Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/linku-3:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-04-04T02:06:22.755Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:06:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=330","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:06:22.755Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:06:22.761Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:06:22.763Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:06:22.763Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:06:22.996Z] <<< HTTP RESPONSE 400 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 04 Apr 2021 02:06:22 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:06:23.002Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/linku-3  
+ 
+[debug] [2021-04-04T02:06:23.469Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:06:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:06:23.469Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:06:23.472Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:06:23.476Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project linku-3. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-04-04T02:09:55.023Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:09:55.026Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-04-04T02:09:55.029Z] CLI Version:   8.10.0
+[debug] [2021-04-04T02:09:55.030Z] Platform:      linux
+[debug] [2021-04-04T02:09:55.030Z] Node Version:  v10.19.0
+[debug] [2021-04-04T02:09:55.031Z] Time:          Sat Apr 03 2021 21:09:55 GMT-0500 (hora estándar de Colombia)
+[debug] [2021-04-04T02:09:55.031Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:09:55.031Z] 
+[debug] [2021-04-04T02:09:55.044Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-04T02:09:55.044Z] > authorizing via signed-in user
+[debug] [2021-04-04T02:09:55.045Z] [iam] checking project linku-3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-04-04T02:09:55.049Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:09:55.050Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:09:55.372Z] <<< HTTP RESPONSE 400 {"date":"Sun, 04 Apr 2021 02:09:55 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:09:55.377Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/linku-3:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-04-04T02:09:55.954Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:09:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=300","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:09:55.954Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:09:55.958Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:09:55.961Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:09:55.961Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:09:56.237Z] <<< HTTP RESPONSE 400 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 04 Apr 2021 02:09:56 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:09:56.238Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/linku-3  
+ 
+[debug] [2021-04-04T02:09:56.551Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:09:56 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:09:56.552Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:09:56.554Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:09:56.558Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project linku-3. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-04-04T02:10:02.765Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:10:02.768Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2021-04-04T02:10:02.769Z] CLI Version:   8.10.0
+[debug] [2021-04-04T02:10:02.769Z] Platform:      linux
+[debug] [2021-04-04T02:10:02.769Z] Node Version:  v10.19.0
+[debug] [2021-04-04T02:10:02.770Z] Time:          Sat Apr 03 2021 21:10:02 GMT-0500 (hora estándar de Colombia)
+[debug] [2021-04-04T02:10:02.770Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:10:02.770Z] 
+[debug] [2021-04-04T02:10:02.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-04T02:10:02.779Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/juan/Descargas/Estudio y programas/Proyectos/Angular/minidrive
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using linku-3. 
+[debug] [2021-04-04T02:10:06.443Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:10:06.444Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:10:06.790Z] <<< HTTP RESPONSE 400 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 04 Apr 2021 02:10:06 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:10:06.792Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/linku-3  
+ 
+[debug] [2021-04-04T02:10:07.217Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:10:07 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:10:07.222Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:10:07.225Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:10:07.227Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project linku-3. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-04-04T02:15:26.236Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:15:26.253Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2021-04-04T02:15:26.255Z] CLI Version:   8.10.0
+[debug] [2021-04-04T02:15:26.255Z] Platform:      linux
+[debug] [2021-04-04T02:15:26.258Z] Node Version:  v10.19.0
+[debug] [2021-04-04T02:15:26.258Z] Time:          Sat Apr 03 2021 21:15:26 GMT-0500 (hora estándar de Colombia)
+[debug] [2021-04-04T02:15:26.259Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:15:26.259Z] 
+[debug] [2021-04-04T02:15:26.351Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-04T02:15:26.363Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/juan/Descargas/Estudio y programas/Proyectos/Angular/minidrive
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using linku-3. 
+[debug] [2021-04-04T02:15:38.628Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:15:38.628Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:15:38.986Z] <<< HTTP RESPONSE 400 {"pragma":"no-cache","date":"Sun, 04 Apr 2021 02:15:38 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:15:38.992Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/linku-3  
+ 
+[debug] [2021-04-04T02:15:39.329Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:15:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:15:39.332Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:15:39.336Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:15:39.339Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project linku-3. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-04-04T02:15:51.231Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:15:51.235Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-04-04T02:15:51.236Z] CLI Version:   8.10.0
+[debug] [2021-04-04T02:15:51.236Z] Platform:      linux
+[debug] [2021-04-04T02:15:51.236Z] Node Version:  v10.19.0
+[debug] [2021-04-04T02:15:51.237Z] Time:          Sat Apr 03 2021 21:15:51 GMT-0500 (hora estándar de Colombia)
+[debug] [2021-04-04T02:15:51.237Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T02:15:51.237Z] 
+[debug] [2021-04-04T02:15:51.253Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-04T02:15:51.253Z] > authorizing via signed-in user
+[debug] [2021-04-04T02:15:51.254Z] [iam] checking project linku-3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-04-04T02:15:51.263Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:15:51.264Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:15:51.584Z] <<< HTTP RESPONSE 400 {"date":"Sun, 04 Apr 2021 02:15:51 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:15:51.589Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/linku-3:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-04-04T02:15:51.934Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:15:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=57","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:15:51.934Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:15:51.938Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:15:51.942Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-04T02:15:51.943Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T02:15:52.170Z] <<< HTTP RESPONSE 400 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sun, 04 Apr 2021 02:15:52 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:15:52.170Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/linku-3  
+ 
+[debug] [2021-04-04T02:15:52.608Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 04 Apr 2021 02:15:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T02:15:52.609Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-04-04T02:15:52.611Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-04-04T02:15:52.619Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project linku-3. Please make sure the project exists and your account has permission to access it.

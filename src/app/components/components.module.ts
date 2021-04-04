@@ -13,7 +13,6 @@ import { NotFileComponent } from './not-file/not-file.component';
 import { NameRutaComponent } from './name-ruta/name-ruta.component';
 import { SearchComponent } from './search/search.component';
 import { FileCargandoComponent } from './file-cargando/file-cargando.component';
-import { CreateFolderComponent } from './create-folder/create-folder.component';
 import { CanecaComponent } from './caneca/caneca.component';
 import { ArchivosComponent } from './archivos/archivos.component';
 import { DetallesComponent } from './detalles/detalles.component';
@@ -47,7 +46,6 @@ import { UsuarioComponent } from './usuario/usuario.component';
         NameRutaComponent,
         SearchComponent,
         FileCargandoComponent,
-        CreateFolderComponent,
         CanecaComponent,
         ArchivosComponent,
         DetallesComponent,
@@ -77,7 +75,6 @@ import { UsuarioComponent } from './usuario/usuario.component';
         NameRutaComponent,
         SearchComponent,
         FileCargandoComponent,
-        CreateFolderComponent,
         CanecaComponent,
         ArchivosComponent,
         DetallesComponent,

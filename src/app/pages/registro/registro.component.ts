@@ -21,7 +21,7 @@ export class RegistroComponent {
 
     this.forma = this.fb.group({
       correo  : ['', [ Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')] ],
-      nombre  : ['', [Validators.required, Validators.maxLength(10), Validators.minLength(5)] ],
+      nombre  : ['', [Validators.required,Validators.pattern('[A-Za-z0-9]'), Validators.maxLength(10), Validators.minLength(5)] ],
       password   : ['', [Validators.required, Validators.minLength(6)] ],
       password2   : ['', [Validators.required, Validators.minLength(6)] ],
       file   : ['', [Validators.required ]]
